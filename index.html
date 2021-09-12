@@ -1,54 +1,117 @@
 <!doctype html>
 <html>
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>SIMD in C++20: EVE of a New Era</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport"
+		content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="bench_plot.css">
-		<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+	<title>SIMD in C++20: EVE of a New Era</title>
 
-	<link rel="stylesheet"
-    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/styles/arduino-light.css">
-  <script
-    src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.2/highlight.min.js"></script>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="bench_plot.css">
+	<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
 
-  <!-- Theme used for syntax highlighted code -->
-  <link rel="stylesheet" href="plugin/highlight/idea.css" id="highlight-theme">
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/idea.css" id="highlight-theme">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-transition="none">
-					<h2>SIMD in C++20:</h2>
-					<h2>EVE of a New Era</h2>
-					<p>Joel Falcou & Denis Yaroshevskiy</p>
-				</section>
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+
+	<!-- Presentation scripts -->
+	<script src="https://cdn.plot.ly/plotly-2.5.0.min.js"></script>
+	<script> const UNSQ_EVE_COMMIT = 'c2f19edce20fc880c153cd6e7853b8b10dc80d81'; </script>
+	<script type="text/javascript"
+		src="https://cdn.jsdelivr.net/gh/DenisYaroshevskiy/unsq_eve@c2f19edce20fc880c153cd6e7853b8b10dc80d81/scripts/bench.js"></script>
+
+	<script type="text/javascript" src="helper_scripts.js"></script>
+
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-transition="none">
+				<h2>SIMD in C++20:</h2>
+				<h2>EVE of a New Era</h2>
+				<p>Joel Falcou & Denis Yaroshevskiy</p>
+			</section>
+			<section>
+				<p>Slides: <a
+						href="tinyurl.com/eve-simd-2021">https://tinyurl.com/eve-simd-2021</a>
+				</p>
+			</section>
+			<section id='find pitch'>
+				<script>
+					addBenchmarkForSize('find pitch',
+						'Pitch: find',
+						1000,
+						{
+							name: 'find 0',
+							algorithm: 'selection',
+							type: 'x',
+							time: 'y',
+							padding: 'min',
+							group: 'intel_9700K',
+						},
+						['std::find', 'eve::algo::find']);
+				</script>
+			</section>
+			<section id='against strlen pitch'>
+				<script>
+					addBenchmarkForSize('against strlen pitch',
+						'Pitch: eve vs libc',
+						1000,
+						{
+							name: 'find 0',
+							algorithm: 'selection',
+							type: 'char',
+							time: 'y',
+							padding: 'min',
+							group: 'intel_9700K',
+						},
+						['std::strlen', 'eve::algo::find']);
+				</script>
+			</section>
+			<section id='remove_if pitch'>
+				<script>
+					allTypesBenchmark('remove_if pitch',
+						'Pitch: remove_if (1000 bytes) ',
+						{
+							name: 'remove 0',
+							algorithm: 'selection',
+							size: 1000,
+							time: 'y',
+							percentage: 'x',
+							padding: 'min',
+              group: 'intel_9700K'
+						},
+						['std::remove', 'eve::algo::remove']
+					);
+				</script>
+			</section>
+			</section>
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+		Reveal.configure({ slideNumber: 'c/t' });
+	</script>
+</body>
+
 </html>
