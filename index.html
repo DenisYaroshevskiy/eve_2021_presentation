@@ -10,8 +10,7 @@
 
 	<link rel="stylesheet" href="dist/reset.css">
 	<link rel="stylesheet" href="dist/reveal.css">
-	<link rel="stylesheet" href="bench_plot.css">
-	<link rel="stylesheet" href="dist/theme/simple.css" id="theme">
+	<link rel="stylesheet" href="dist/theme/moon.css" id="theme">
 
 	<!-- Theme used for syntax highlighted code -->
 	<link rel="stylesheet" href="plugin/highlight/idea.css" id="highlight-theme">
@@ -21,9 +20,19 @@
 
 	<!-- Presentation scripts -->
 	<script src="https://cdn.plot.ly/plotly-2.5.0.min.js"></script>
-	<script> const UNSQ_EVE_COMMIT = '586774ec3229e5562fe6a26148a741b80dfffe72'; </script>
+
+	<script>
+		function unsq_eve_customize_layout(layout) {
+			layout.paper_bgcolor = '#f5fff8';
+			layout.plot_bgcolor = '#f5fff8';
+			layout.showlegend = true;
+			return layout;
+		}
+	</script>
+
+	<script> const UNSQ_EVE_COMMIT = '6e4fd0cf3fe21cee86db053bca033be9e6edf8ae'; </script>
 	<script type="text/javascript"
-		src="https://cdn.jsdelivr.net/gh/DenisYaroshevskiy/unsq_eve@586774ec3229e5562fe6a26148a741b80dfffe72/scripts/bench.js"></script>
+		src="https://cdn.jsdelivr.net/gh/DenisYaroshevskiy/unsq_eve@6e4fd0cf3fe21cee86db053bca033be9e6edf8ae/scripts/bench.js"></script>
 
 	<script type="text/javascript" src="helper_scripts.js"></script>
 
@@ -123,14 +132,14 @@
 							'MARCHing orders: find(int, 1000)',
 							{
 								name: 'find 0',
-								algorithm: 'eve::algo::find_if',
+								algorithm: 'selection',
 								size: 1000,
 								type: 'int',
 								time: 'y',
 								padding: 'min',
 								group: 'x',
 							},
-							[]
+							['eve::algo::find_if']
 						);
 					</script>
 				</section>
