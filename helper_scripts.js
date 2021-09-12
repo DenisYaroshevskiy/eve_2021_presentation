@@ -12,6 +12,41 @@ function addTitle(section, text) {
   return element;
 }
 
+function measurement_filter(m) {
+  if (m.algorithm.includes('unsq_eve')) return false;
+  if (m.group == 'ryzen3600x'         ) return false;
+  if (['std::reverse', 'std::transform'].some(x => x == m.algorithm)) return false;
+  return true;
+}
+
+async function loadStaticData() {
+  if (!loadStaticData.cache) {
+    let loaded = await loadMeasurements();
+    loaded = loaded.filter(measurement_filter).map((v) => {
+           if (v.group == 'intel_9700K'       ) v.group = 'avx2';
+      else if (v.group == 'intel_9700K_sse2'  ) v.group = 'sse2';
+      else if (v.group == 'intel_9700K_sse4_2') v.group = 'sse4.2';
+      return v;
+    });
+    let byKeys = valuesByKeys(loaded);
+    loadStaticData.cache = [loaded, byKeys];
+  }
+  return loadStaticData.cache;
+}
+
+async function thisPresentationDraw(elementID, selection_, filter_ = []) {
+  const element = document.getElementById(elementID);
+  const [measurements, byKeys] = await loadStaticData();
+
+  let selection = JSON.stringify(selection_, undefined, 2);
+  let filter = JSON.stringify(filter_, undefined, 2);
+  const [varying, fixed] = inputParse(selection, byKeys);
+  const traceFilter = filterParse(filter);
+  const asVisualized = visualizationDataFromMeasurements(varying, fixed, measurements);
+
+  drawBenchmark(element, 1000, asVisualized, traceFilter);
+}
+
 function addBenchmarkForParameters(slide_id, title, parameters, filter) {
   let main = document.getElementById(slide_id);
   let section = addSection(main);
@@ -20,7 +55,7 @@ function addBenchmarkForParameters(slide_id, title, parameters, filter) {
   const id = slide_id + '_' + JSON.stringify(parameters);
   div.setAttribute('id', id);
   section.appendChild(div);
-  presentationEntryPoint(id, parameters, filter);
+  thisPresentationDraw(id, parameters, filter);
 }
 
 function addBenchmarkForSize(slide_id, title, size, parameters, filter) {
