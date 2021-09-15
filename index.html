@@ -54,21 +54,39 @@
 			<section>
 				<h2>Elevator pitch</h2>
 			</section>
-			<section id='find pitch'>
-				<script>
-					addBenchmarkForSize('find pitch',
-						'Pitch: find',
-						1000,
-						{
-							name: 'find 0',
-							algorithm: 'selection',
-							type: 'x',
-							time: 'y',
-							padding: 'min',
-							group: 'avx2',
-						},
-						['std::find', 'eve::algo::find']);
-				</script>
+			<section>
+				<section id='find pitch: std'>
+					<script>
+						addBenchmarkForSize('find pitch: std',
+							'Pitch: find',
+							1000,
+							{
+								name: 'find 0',
+								algorithm: 'selection',
+								type: 'x',
+								time: 'y',
+								padding: 'min',
+								group: 'avx2',
+							},
+							['std::find']);
+					</script>
+				</section>
+				<section id='find pitch: vs'>
+					<script>
+						addBenchmarkForSize('find pitch: vs',
+							'Pitch: find',
+							1000,
+							{
+								name: 'find 0',
+								algorithm: 'selection',
+								type: 'x',
+								time: 'y',
+								padding: 'min',
+								group: 'avx2',
+							},
+							['std::find', 'eve::algo::find']);
+					</script>
+				</section>
 			</section>
 			<section id='against strlen pitch'>
 				<script>
@@ -86,23 +104,81 @@
 						['std::strlen', 'eve::algo::find']);
 				</script>
 			</section>
-			<section id='inclusive_scan pitch'>
-				<script>
-					addBenchmarkForSize('inclusive_scan pitch',
-						'Pitch: inclusive_scan',
-						1000,
-						{
-							name: 'inplace transform',
-							size: 1000,
-							algorithm: 'selection',
-							type: 'x',
-							time: 'y',
-							padding: 'min',
-							group: 'avx2',
-							percentage: 100,
-						},
-						['std::inclusive_scan', 'eve::algo::inclusive_scan_inplace']);
-				</script>
+			<section>
+				<section id='inclusive_scan pitch std'>
+					<script>
+						addBenchmarkForSize('inclusive_scan pitch std',
+							'Pitch: inclusive_scan',
+							1000,
+							{
+								name: 'inplace transform',
+								size: 1000,
+								algorithm: 'selection',
+								type: 'x',
+								time: 'y',
+								padding: 'min',
+								group: 'avx2',
+								percentage: 100,
+							},
+							['std::inclusive_scan']);
+					</script>
+				</section>
+				<section id='inclusive_scan pitch vs'>
+					<script>
+						addBenchmarkForSize('inclusive_scan pitch vs',
+							'Pitch: inclusive_scan',
+							1000,
+							{
+								name: 'inplace transform',
+								size: 1000,
+								algorithm: 'selection',
+								type: 'x',
+								time: 'y',
+								padding: 'min',
+								group: 'avx2',
+								percentage: 100,
+							},
+							['std::inclusive_scan', 'eve::algo::inclusive_scan_inplace']);
+					</script>
+				</section>
+			</section>
+			<section>
+				<section id='remove_if pitch 0 std'>
+					<script>
+						addBenchmarkForSize('remove_if pitch 0 std',
+							'Pitch: remove_if',
+							10000,
+							{
+								name: 'remove 0',
+								algorithm: 'selection',
+								time: 'y',
+								type: 'selection',
+								percentage: 'x',
+								padding: 'min',
+								group: 'avx2'
+							},
+							['std::remove']
+						);
+					</script>
+				</section>
+				<section id='remove_if pitch 0 vs'>
+					<script>
+						addBenchmarkForSize('remove_if pitch 0 vs',
+							'Pitch: remove_if',
+							10000,
+							{
+								name: 'remove 0',
+								algorithm: 'selection',
+								time: 'y',
+								type: 'selection',
+								percentage: 'x',
+								padding: 'min',
+								group: 'avx2'
+							},
+							['std::remove', 'eve::algo::remove']
+						);
+					</script>
+				</section>
 			</section>
 			<section id='remove_if pitch'>
 				<script>
