@@ -34,7 +34,7 @@ async function loadStaticData() {
   return loadStaticData.cache;
 }
 
-async function thisPresentationDraw(elementID, selection_, filter_ = []) {
+async function thisPresentationDraw(elementID, selection_, filter_, offByDefault) {
   const element = document.getElementById(elementID);
   const [measurements, byKeys] = await loadStaticData();
 
@@ -44,10 +44,10 @@ async function thisPresentationDraw(elementID, selection_, filter_ = []) {
   const traceFilter = filterParse(filter);
   const asVisualized = visualizationDataFromMeasurements(varying, fixed, measurements);
 
-  drawBenchmark(element, 1000, asVisualized, traceFilter);
+  drawBenchmark(element, 1000, asVisualized, traceFilter, offByDefault);
 }
 
-function addBenchmarkForParameters(slide_id, title, parameters, filter) {
+function addBenchmarkForParameters(slide_id, title, parameters, filter, offByDefault = []) {
   let main = document.getElementById(slide_id);
   let section = addSection(main);
   addTitle(section, title);
@@ -55,25 +55,25 @@ function addBenchmarkForParameters(slide_id, title, parameters, filter) {
   const id = slide_id + '_' + JSON.stringify(parameters);
   div.setAttribute('id', id);
   section.appendChild(div);
-  thisPresentationDraw(id, parameters, filter);
+  thisPresentationDraw(id, parameters, filter, offByDefault);
 }
 
-function addBenchmarkForSize(slide_id, title, size, parameters, filter) {
+function addBenchmarkForSize(slide_id, title, size, parameters, filter, offByDefault = []) {
   title += ' (' + size.toString() + ' bytes)';
 
   let parameters_copy = JSON.parse(JSON.stringify(parameters));
 
   parameters_copy.size = size;
-  addBenchmarkForParameters(slide_id, title, parameters_copy, filter);
+  addBenchmarkForParameters(slide_id, title, parameters_copy, filter, offByDefault);
 }
 
-function addBenchmarkForType(slide_id, title, type, parameters, filter) {
+function addBenchmarkForType(slide_id, title, type, parameters, filter, offByDefault = []) {
   title += ' (' + type + ')';
 
   let parameters_copy = JSON.parse(JSON.stringify(parameters));
 
   parameters_copy.type = type;
-  addBenchmarkForParameters(slide_id, title, parameters_copy, filter);
+  addBenchmarkForParameters(slide_id, title, parameters_copy, filter, offByDefault);
 }
 
 function allSizesBenchmark(slide_id, title, parameters, filter) {
