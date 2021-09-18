@@ -155,7 +155,7 @@
 				</ul>
 			</section>
 			<section>
-				<h2>How to exploit SIMD ?</h2>
+				<h2>How to use SIMD ?</h2>
 				<ul>
 					<li class="fragment"> Compiler's autovectorization </li>
 					<li class="fragment"> Pragmas/special compilers</li>
@@ -163,7 +163,6 @@
 					<li class="fragment"> Specialized tools: <a href="https://youtu.be/1ir_nEfKQ7A">Halide</a>, <a href="https://github.com/simdjson/simdjson">simdjson</a> </li>
 					<li class="fragment"> write by hand</li>
 				</ul>
-				<h3>
 			</section>
 			<section>
 				<h2>EVE - The Expressive Velocity Engine</h2>
@@ -250,9 +249,8 @@
 				<h3>SIMD Optimization</h3>
 <iframe width="800px" height="600px" src="https://godbolt.org/e#z:OYLghAFBqRAWIDGB7AJgUwKKoJYBdkAnAGhxAgDMcAbdAOwEMBbdEAcgEY3iLk68Ayoga0QHACw8%2BeAKoBndAAUAHuwAM3AFZji1BnVCIApACYAQqbPEFtRHhx9y9VAGFk1AK5M6IAOwAOYmcAGRw6dAA5LwAjdEIxDmIAB2Q5fAc6N09vP0CUtPs%2BUPCoplj4jkSbdDsMgTwGQjwsrx8A63RbQrp6xrxiyJi4hOsGppac9rkx/rDBsuHKgEprZA9CRFY2PHQmJL0dowBmF0J0EQB9OWE9QguANxEPdABqABViF7wATyT6ZleEWOmCMagAgpgAGqYC4AMQA8gAlFyYACSEWC6MwLwA7jgMMcXB8XkCjtiGNE5BcIFCYQIZIpFEi3gIIHIFCYLitcfj0ITiaTsSg6NMXqYAGz3JYvOjIdDKTZJPCgsFnACOHhwZzkL2U/nFFwpOEJRouypOAuBVvBRl8FnBLxewum8qShBeDA8BCdYqOABEnQwdsAiDgAF58k54gkWz6C4EQJbHe1glWO9PpnAUJ18F3KN0QRBikziiWB4NEb4gEAeEU4YDhVAXR3Sl5nPDrOgve7JtMvToKR1ZnMinb5wiF31%2B44B4QVwhVkAUajIINHEzKDjil6t9udl4XJhMACsHE5FKpSTkEClvYd/eog5ew%2BdY4LRZnM/L6BDC%2Bry9XPBxXEPUW0dPdCC7Q8TzPQ1KQuJJUBvJMjhTR0B1eZ9s1fV0Jw/EsyznH9K3/Fcg2bDNd3QDtIJeaJ8AuWUGjoJCmAjQhkAgBhrylblb1QvsMKHbDczfPCpy/Ijf0XMIgJA/wdwzNtqP3aDT3PeD0CSHBgOQu8wXQx9MJfUTcMnCVCKDYi/xANII2A5tW3TCCuyYBgkggdB7lYEAL0%2Bfi0IfJ8TNHMyP39SSrOk6tZPXTdxSc8CVNotTYIvC4tJwdc9IE%2B8hKwkc83fCT/W/aKQFijcFKTe9bUC4TCrEwt1jOfhDW030QVKhh7mUExFKUwaXIPI8TGPA10sy7KAr7Qyn0GhbFqW5bhoYYBgDOYArM87zqz87sUMC21pzyoyGpw8dzIi0qpJIir%2BDi8Qdz7OrZoKi73xa%2Bg8HanBOq/dkFCOAaluG6C4KpKaTBy%2Bqgr5e9HVehH009b0dS/cG5EIBgcAy7TpuII4OEOt6kporto0jIk4ytO1MY8aI8ay6HweUIgrhwM9/BvawVjkJNfGnXKDPTY6XsFwSzve0zLvCoXZyiu7ZK3ZR10S5TyZGmCNMh7StxhyXgpE0LZZKhX5xk/gVa3Z7artN6QqKvCvra9y/qtbrev66UwdG8aIaZ/WArhjX9zWjaf22ryfP2ma7ZOkX8sdpq5cii2Yqt8VQJqkWkZF86Zc%2BwhWp%2Bt3/tKwH0GBn3kqgo8A8yoPDpD0OUvrtzlED8UeYAWjj3OJdOo3GrCs2yqV/h/GUYCQbJ1Sj3UhvtO5/u5uM42nau%2BXx5s2Sp/XW2B9h5Owpd0uOo9gMer6gbfaYMaJs05eYZD1b1s2qPdt8yl/JJ%2BPDfXiPU2n4bqK13pPeKh9Eb22RifWWZ9frlwDJXaurc65MCXjgFezd8p30PGEPGHgV7ED7n/AeCdjpsBWNQdgx5uA%2BDYBoYgyB2AuEsJYF4cg1gbFeKYIm3A8DqCoSsAA1mINQahdDsHENwJg4jJEMKYSwtg3A5AgEkYIxhwjiDeUIGkRw4ggA%3D%3D"></iframe>
 			</section>
-
 			<section>
-				<h2>TODO: platforms and march</h2>
+				<h2>How important is it to -march?</h2>
 			</section>
 			<section id='marching_find'>
 				<script>
@@ -341,7 +339,7 @@
 				</section>
 			</section>
 			<section>
-				<h3>Find (complicated predicate)</h3>
+				<h3>Tuning algorithms</h3>
 				<iframe width="800px" height="600px"
 					src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:28,endLineNumber:6,positionColumn:28,positionLineNumber:6,selectionStartColumn:28,selectionStartLineNumber:6,startColumn:28,startLineNumber:6),source:'%23include+%3Ceve/algo/as_range.hpp%3E%0A%23include+%3Ceve/algo/find.hpp%3E%0A%23include+%3Ceve/function/rat.hpp%3E%0A%0Aauto+find_approx(std::vector%3Cfloat%3E+const%26+nums)+%7B%0A++return+eve::algo::find_if(nums,+%5B%5D(eve::wide%3Cfloat%3E+x)+%7B%0A++++auto+%5Bnum,+denum%5D+%3D+eve::rat(x)%3B%0A++++return+denum+%3E+7%3B%0A++%7D)%3B%0A%7D%0A%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:44.50474898236092,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-march%3Dskylake-avx512++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:55.49525101763908,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4">
 				</iframe>
@@ -351,106 +349,107 @@
 					imagesSlideShow('mismatch_is_find', 6);
 				</script>
 			</section>
-			<section>
-				<h3>Mismatch int/int</h3>
-				<iframe width="800px" height="600px" src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:33,endLineNumber:1,positionColumn:33,positionLineNumber:1,selectionStartColumn:33,selectionStartLineNumber:1,startColumn:33,startLineNumber:1),source:'%23include+%3Ceve/algo/as_range.hpp%3E%0A%23include+%3Ceve/algo/find.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%0Aauto+mismatch(int+const*+f1,+int+const*+l1,+int+const*+f2)%0A++//+-%3E+wait+for+it%0A%7B%0A++auto+zipped+%3D+eve::algo::zip(eve::algo::as_range(f1,+l1),+f2)%3B%0A++return+eve::algo::find_if_not(zipped,+%5B%5D(auto+x_y)+%7B%0A++++auto+%5Bx,+y%5D+%3D+x_y%3B%0A++++return+x+%3D%3D+y%3B%0A++%7D)%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:47.074122236671,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-mavx2++-Wno-psabi++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:52.925877763329,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
+			<section id='zip_different_types'>
+				<script>
+					imagesSlideShow('zip_different_types', 3);
+				</script>
 			</section>
-				<section id='zip_different_types'>
-					<script>
-						imagesSlideShow('zip_different_types', 3);
-					</script>
-				</section>
-				<section>
-					<h3>Mismatch int/double</h3>
-					<iframe width="800px" height="600px"
-						src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:55,endLineNumber:8,positionColumn:55,positionLineNumber:8,selectionStartColumn:55,selectionStartLineNumber:8,startColumn:55,startLineNumber:8),source:'%23include+%3Ceve/algo/as_range.hpp%3E%0A%23include+%3Ceve/algo/find.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%0Aauto+mismatch(int+const*+f1,+int+const*+l1,+double+const*+f2)%0A++//+-%3E+wait+for+it%0A%7B%0A++auto+zipped+%3D+eve::algo::zip%5Beve::algo::common_type%5D(eve::algo::as_range(f1,+l1),+f2)%3B%0A++return+eve::algo::find_if_not(zipped,+%5B%5D(auto+x_y)+%7B%0A++++auto+%5Bx,+y%5D+%3D+x_y%3B%0A++++return+x+%3D%3D+y%3B%0A++%7D)%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:47.074122236671,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-mavx2++-Wno-psabi++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:52.925877763329,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
-				</section>
-				<section>
-					<h3> memcmp </h3>
-					<iframe width="800px" height="600px"
-						src="https://godbolt.org/e?hideEditorToolbars=true#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:5,endLineNumber:5,positionColumn:5,positionLineNumber:5,selectionStartColumn:5,selectionStartLineNumber:5,startColumn:5,startLineNumber:5),source:'%23include+%3Ceve/algo/as_range.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%23include+%3Ceve/algo/mismatch.hpp%3E%0A%0Aint+memcmp_(+void+const*+lhs,+void+const*+rhs,+std::size_t+count+)%0A%7B%0A++auto*+f1+%3D+reinterpret_cast%3Cstd::int8_t+const*%3E(lhs)%3B%0A++auto*+l1+%3D+f1+%2B+count%3B%0A++auto*+f2+%3D+reinterpret_cast%3Cstd::int8_t+const*%3E(rhs)%3B%0A%0A++eve::algo::zip_range++++zipped+%3D+eve::algo::zip(eve::algo::as_range(f1,+l1),+f2)%3B%0A++eve::algo::zip_iterator+zip_l++%3D+zipped.end()%3B%0A%0A++eve::algo::zip_iterator+mmatch+%3D+eve::algo::mismatch(zipped)%3B%0A++if+(mmatch+%3D%3D+zip_l)+return+0%3B%0A%0A++auto+%5Blhs_byte,+rhs_byte%5D+%3D+eve::read(mmatch)%3B%0A++return+lhs_byte+-+rhs_byte%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:55.39661898569571,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:arm64g1100,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-Wno-psabi++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+11.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:44.60338101430429,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
-				</section>
-				<section>
-					<h3> inclusive_scan complex numbers</h3>
-					<iframe width="800px" height="600px"
-						src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:5,endLineNumber:17,positionColumn:5,positionLineNumber:17,selectionStartColumn:5,selectionStartLineNumber:17,startColumn:5,startLineNumber:17),source:'%23include+%3Ceve/algo/inclusive_scan.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%0A%23include+%3Cvector%3E%0A%0Avoid+inclusive_scan_implace_cmplx(std::vector%3Cfloat%3E%26+re,+std::vector%3Cfloat%3E%26+img)%0A%7B%0A++using+cmplx+%3D+kumi::tuple%3Cfloat,+float%3E%3B%0A++%0A++auto+plus+%3D+%5B%5D(eve::wide%3Ccmplx%3E+x,+eve::wide%3Ccmplx%3E+y)+%7B%0A++++get%3C0%3E(x)+%2B%3D+get%3C0%3E(y)%3B%0A++++get%3C1%3E(x)+%2B%3D+get%3C1%3E(y)%3B%0A++++return+x%3B%0A++%7D%3B%0A%0A++eve::algo::inclusive_scan_inplace(eve::algo::zip(re,+img),+%0A++++std::pair%7Bplus,+cmplx%7B0.0,+0.0%7D%7D,+cmplx%7B0.0,+0.0%7D)%3B%0A%7D'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:50,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-mavx2++-Wno-psabi++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:50,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
-				</section>
-				<section>
-					<h3>TODO: collect indexes</h3>
-				</section>
-				<section>
-					<h3>TODO: Back to inclusive_scan complex numbers. Objects. SOA_VECTOR.
-					</h3>
-				</section>
-				<section>
-					<h3>TODO: Big erase_remove example: clean up dead objects in a game.
-					</h3>
-				</section>
-				<section>
-					<h1> Mic drop </h1>
-				</section>
-				<section>
-					<h2>Practicalities</h2>
-					<p class="fragment"> (... akwardly picking up the mic)</p>
-				</section>
-				<section>
-					<h2>What about bugs?</h2>
-					<ul>
-						<li class="fragment">poor codegen</li>
-						<li class="fragment">compiletime bugs</li>
-						<li class="fragment">runtime bugs</li>
-					</ul>
-				</section>
-				<section>
-					<h2>API stability?</h2>
-					<h1 class="fragment">NO</h1>
-				</section>
-				<section>
-					<h2>ABI stability?</h2>
-					<p class="fragment">Within one commit ...</p>
-				</section>
-				<section>
-					<h2> Recommended workflow</h2>
-					<ul>
-						<li class="fragment"> contact us </li>
-					</ul>
-				</section>
-				<section>
-					<h2>Similar Libraries</h2>
-					<ul>
-						<li class="fragment"> intrinsics wrappers
-							 <a href="https://github.com/VcDevel/Vc"> Vc(std::simd)</a>,
-							 <a href="https://github.com/xtensor-stack/xsimd">xsimd</a>,
-							 <a href="https://github.com/jeffamstutz/tsimd">tsimd</a>
-						</li>
-						<li class="fragment"> <a href="https://github.com/simd-everywhere/simde">SIMD everywhere</a></li>
-					</ul>
-				</section>
-				<section>
-					<h2>Mentions</h2>
-					<ul>
-						<li class="fragment"> Jean-Thierry Lapresté </li>
-						<li class="fragment"> StackOverflow: @aqrit, @Peter Cordes, @Z boson, @Stephen Canon </li>
-					</ul>
-				</section>
-				<section>
-					<h2> Other talks</h2>
-					<ul>
-						<li class="fragment"> <a href="https://youtu.be/d6NcnyXjc3I">My First Simd (Meeting C++2020)</a></li>
-					</ul>
-				</section>
-				<section>
-					<h2>Contact information</h2>
-					<ul>
-						<li>slides: <a
-							href="https://tinyurl.com/eve-simd-2021">tinyurl.com/eve-simd-2021</a></li>
-						<li> <a href="github.com/jfalcou/eve">github.com/jfalcou/eve</a> (discussions/issues) </li>
-						<li> <a href="https://discord.com/channels/692734675726237696/692735259204124692">Discord</a> </li>
-						<li> cpplang slack: jfalcou, dyaroshev </li>
-						<li> email: joel.falcou@lri.fr, denis.yaroshevskij@gmail.com </li>
-						<li> twitter: @CppSpelunker, @dyaroshev</li>
-					</ul>
-				</section>
+			<section>
+				<h3> memcmp </h3>
+				<iframe width="800px" height="600px" src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:27,endLineNumber:11,positionColumn:27,positionLineNumber:11,selectionStartColumn:27,selectionStartLineNumber:11,startColumn:27,startLineNumber:11),source:'%23include+%3Ceve/algo/as_range.hpp%3E%0A%23include+%3Ceve/algo/mismatch.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%0Aint+memcmp_(+void+const*+lhs,+void+const*+rhs,+std::size_t+count+)%0A%7B%0A++auto+const*+f1+%3D+reinterpret_cast%3Cstd::uint8_t+const*%3E(lhs)%3B%0A++auto+const*+l1+%3D+f1+%2B+static_cast%3Cstd::ptrdiff_t%3E(count)%3B%0A++auto+const*+f2+%3D+reinterpret_cast%3Cstd::uint8_t+const*%3E(rhs)%3B%0A%0A++eve::algo::as_range+++++r1%7Bf1,+l1%7D%3B%0A++eve::algo::zip_range++++r1_r2+%3D+eve::algo::zip(r1,+f2)%3B%0A++eve::algo::zip_iterator+found+%3D+eve::algo::mismatch(r1_r2)%3B%0A%0A++if+(found+%3D%3D+r1_r2.end())+return+0%3B%0A%0A++auto+%5Bv1,+v2%5D+%3D+eve::read(found)%3B%0A%0A++return+static_cast%3Cint%3E(v1)+-+static_cast%3Cint%3E(v2)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:58.517555266579976,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-mavx2++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:41.482444733420024,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>			</section>
+			<section>
+				<h3> inclusive_scan complex numbers</h3>
+				<iframe width="800px" height="600px"
+					src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:17,positionColumn:1,positionLineNumber:17,selectionStartColumn:1,selectionStartLineNumber:17,startColumn:1,startLineNumber:17),source:'%23include+%3Ceve/algo/inclusive_scan.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%0A%23include+%3Cvector%3E%0A%0Ausing+cmplx+%3D+kumi::tuple%3Cfloat,+float%3E%3B%0A%0Avoid+inclusive_scan_complex(std::vector%3Cfloat%3E%26+re,+std::vector%3Cfloat%3E%26+im,+cmplx+init)%0A%7B%0A++eve::algo::zip_range+zipped+%3D+eve::algo::zip(re,+im)%3B%0A%0A++auto+plus+%3D+%5B%5D(eve::wide%3Ccmplx%3E+x,+eve::wide%3Ccmplx%3E+y)+%7B%0A++++get%3C0%3E(x)+%2B%3D+get%3C0%3E(y)%3B%0A++++get%3C1%3E(x)+%2B%3D+get%3C1%3E(y)%3B%0A++++return+x%3B%0A++%7D%3B%0A%0A++eve::algo::inclusive_scan_inplace(%0A++++zipped,+std::pair%7Bplus,+cmplx%7B0.0,+0.0%7D%7D,+init%0A++)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:61.378413524057216,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-mavx2++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:38.621586475942784,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
+			</section>
+			<section>
+				<h3>Collect indexes example</h3>
+				<ul>
+					<li class="fragment"> <a href="https://maxdemarzi.com/2021/08/30/lets-build-something-outrageous-part-13-finding-things-faster">Max De Marzi's blog</a></li>
+					<li class="fragment"> requests per second went up 5.75 times </li>
+				</ul>
+			</section>
+      <section id='compress_store_unsafe'>
+        <script>
+          imagesSlideShow('compress_store_unsafe', 5);
+        </script>
+      </section>
+			<section>
+				<h3>Collect indexes</h3>
+				<iframe width="800px" height="600px"
+					src="https://godbolt.org/e#z:OYLghAFBqd5QCxAYwPYBMCmBRdBLAF1QCcAaPECAMzwBtMA7AQwFtMQByARg9KtQYEAysib0QXAGx8BBAKoBnTAAUAHpwAMvAFYTStJg1DIApACYAQuYukl9ZATwDKjdAGFUtAK4sGEgOykrgAyeAyYAHI%2BAEaYxCAAzAAspAAOqAqETgwe3r4BaRlZAqHhUSyx8cm2mPaOAkIETMQEuT5%2BABw1ddmNzQSlkTFxiSkKTS1t%2BV3j/YPllaMAlLaoXsTI7BwmGgCC5glhyN5YANQmCW6YAG6YAPRiwKh3aAybqQQKAHQIqakX2B2%2BzMhzeJ0w50uN3uj2eqWImHhqE2CgUAH1iIZgJgfn8AUCCSCjuDIVdbncqF43vUGC9UCx4ZhUWjxiQcb9/glAXsDsSvGcLmT7pTqdk7rRUEx0LjOdz9jyiWD%2BRDBaJUXECPiFaDjsrSa93p8tcCdSTBQQAJ6pTBogiYwgKY28pUCy63BwkJ17AiYBkGH2k6EgECw4MIgyqTDoDFYiEAJVIp0t1uYbFOykT43QwbCPuAmNopwAkuhVAAVK2YRPJxisCG7WgS0xcoHXVB4dCnNCNzAONFhLCRhQQOPmSRj05kdOnVKZgjZkDuojEQUl8uVxMNpv4sySSdMpYE/xWPanU5MdUtKDEL6uCBLU4AWknX1iwDC99JFwAIqcs8GGB8OI8GQNFaDwFgHVXUsK2tAFgxYJhVHvB8xzQ08z0wzDzDMMsEAhNYCFSLwCCTStTjwBRTgYVBSOiPBgFORg1mABAk1QU4EE8Tt0h9QQ8DECiGEHJkcMPBIT3lXYzwRb5jkwZp7wuSSzzwKhTggG83w/VCEm/H8XzvJYHwRAh1gYZSCQwrxMiMU4y0hX8gxDWgnmDa4xC8G0a1tQV/xABEWFQW40WQa4ESoXzLlHFtYskoEz1ecZMFUeE/3nYMPmIfAqEi0jktSRz0oXSCGAgZyUutBwo1C5p8GYWg0WuQUywBUgEqwzquu6nreswirUt7H1o1EbKwjEJroPXOCuXE%2BKMKYEiOKRFElE7AznNDEBGRWpl0UxIxMAgDqz021zUGDO0mCg48zrckB%2BA2G1RvqsQ/J9WUTH8b92ows9/MegB3OrBRi7BNMPDC5qs6TzyW051J6gzdvVaVtLK6GFvhwskb0mdiGRPao1vYSlIkjrFqIfHe0om1CwM9TrA0wtnyoB87nSxFTgAKk5zl5th2SvlkvAAC8jpZhHzksPnMdhtdYMwXnCKKoX0CYJoyYF07bmDQGO0wKbFcTZyaEjdB3sRfEuVOfWsH7L6rAAVmd78IFzCjE1zVDj33MziAYCjlPOb6vv08meQwwGEDoCFqFOMAwGRhFkFpsCfZUzDKY4n1xk65Hyt1kAJSlahjMsv64apjtVFtJlSI2ovXluK9c4IE2i4vQVnIld9RFoI3K2twFjzDuWsJVxv2BAKkFCYKgjuctAGVk9FWQRJYIDtm08C90s6/GRNCLlk7bYN/tpasPGCor2Gz0RrDrAMm%2BI9hsOYdU9T48TgzaAz0/s4UWADRBE2E8bOQANaYERGiGgxBxgQElmzYO5xK6ALbvnPGqRC7TxLhbF2DEQGGydm7Nmc1UF3z6lQ6hvUAHwxrgfBu4Cm4CBbgQCAbcO7Ty7lCIuvcQJvUuArIesUR5WG%2BifSuDCMEGWkfXaW45dxAKIV8RCCgIE4ODBed2%2B827l1fhPEiRVnKz3novFhK89osmXJgTe29%2Bx71rpw04x9b5nnfpHQWTJhZMjFkdFWz41YayYChNx%2B5vgKAQMQMIEDbSoFgYQLWR59KeLbB2LsYhaAQH8kuT0lxcwAi7AIcYE4whzgXLklclx/K5kkEkKKgIlHHxDpnbsdR%2BzCRSkyd2DBEwmBdv0t2gDVAZz9uZU4qhITYFOE7YOYdEwuJIifb6HAVi0E4E7XgfgOBaFIBdDgbgn4ywUGsJ60sEg8FIAQTQqyVgQIkBoDQ%2BhOBJF4CwEATsOhfCdlwfwTt/m7kkE7fwABOEF/hpDbN2fs3gCgQBPOuTs1ZpA4CwCQMvVIscyAUAgBirFKADBGC4GYDQXA%2BB0B9PAyg0QbmkHoswYgFpOCXOXmwQQAB5BgtAmVItIFgRCRhxC8vwCnRwtw4W8q6cgEiWxLm5lqLS8C0RMSMo8FgWldoILMuRVQAwwAFAADU8CYEBuylM2qZCCBEGIdgUhLXyCUGoWlugEj6CxCgI5NglVwtgKmdg0JSAtxAHaKkEDjJ7I%2BNkCVj5HxZh/KYSw1gSVPkQtcVQZgzyPnZQkJ834IjfmwBYOQABxWFtQhrZBcMJKYfgyUhDCEMCoIwyXpEyDSGtehW3FAYPMYY8QyV2ArQ0CYrRPDtD0IOhwvQR29qbf22wI6O0DpnQ2hYzaVgnPWJsPQdpoHarWRsrZtL9mqA6JIR8dSuyEsYsSr4GgvhcA0ocxNlhEy4EICQc5ZLTgeAZFi85CQli8ERVocN%2BEpQjHvM8jgrzSDvKSFwL4SQOhmCSGh/wCRkgko0Kh0gULeAwtsPCq5Nzw3rI4AkI9vLCMgduYGuImRnBJCAA%3D%3D"></iframe>
+			</section>
+			<section>
+				<h3>Back to inclusive_scan complex numbers</h3>
+				<iframe width="800px" height="600px"
+					src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,selection:(endColumn:1,endLineNumber:17,positionColumn:1,positionLineNumber:17,selectionStartColumn:1,selectionStartLineNumber:17,startColumn:1,startLineNumber:17),source:'%23include+%3Ceve/algo/inclusive_scan.hpp%3E%0A%23include+%3Ceve/algo/zip.hpp%3E%0A%0A%23include+%3Cvector%3E%0A%0Ausing+cmplx+%3D+kumi::tuple%3Cfloat,+float%3E%3B%0A%0Avoid+inclusive_scan_complex(std::vector%3Cfloat%3E%26+re,+std::vector%3Cfloat%3E%26+im,+cmplx+init)%0A%7B%0A++eve::algo::zip_range+zipped+%3D+eve::algo::zip(re,+im)%3B%0A%0A++auto+plus+%3D+%5B%5D(eve::wide%3Ccmplx%3E+x,+eve::wide%3Ccmplx%3E+y)+%7B%0A++++get%3C0%3E(x)+%2B%3D+get%3C0%3E(y)%3B%0A++++get%3C1%3E(x)+%2B%3D+get%3C1%3E(y)%3B%0A++++return+x%3B%0A++%7D%3B%0A%0A++eve::algo::inclusive_scan_inplace(%0A++++zipped,+std::pair%7Bplus,+cmplx%7B0.0,+0.0%7D%7D,+init%0A++)%3B%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:61.378413524057216,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:clang1201,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-mavx2++-O3+-DNDEBUG',selection:(endColumn:1,endLineNumber:1,positionColumn:1,positionLineNumber:1,selectionStartColumn:1,selectionStartLineNumber:1,startColumn:1,startLineNumber:1),source:1,tree:'1'),l:'5',n:'0',o:'x86-64+clang+12.0.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:38.621586475942784,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
+			</section>
+			<section>
+				<h3>OBJECTively better</h3>
+				<iframe width="800px" height="600px"
+					src="https://godbolt.org/e#z:OYLghAFBqd5QCxAYwPYBMCmBRdBLAF1QCcAaPECAMzwBtMA7AQwFtMQByARg9KtQYEAysib0QXAGx8BBAKoBnTAAUAHpwAMvAFYTStJg1DIApACYAQuYukl9ZATwDKjdAGFUtAK4sGe1wAyeAyYAHI%2BAEaYxCAAHKQADqgKhE4MHt6%2BekkpjgJBIeEsUTHxdpgOaUIETMQEGT5%2BXLaY9nkM1bUEBWGR0XG2NXUNWc0KQ93BvcX9sQCUtqhexMjsHOYAzMHI3lgA1CYbbpgAbpgA9KeYAHQICQmH2CYaAIKb27uYB0dX51ReDEqAnOTAiClu90ezzeZi2gM%2B32OZz%2BAKBDHOCgAjnUIQ8Nk9Xu94V59ockRcEsQMF4HAB9AgATwSNzueIJb0JsI%2BJK%2BZN%2BYmAqHOaEETCmxAxqCYtLODhIuKhnLhOx5iP5tEF525KTOtIUogYCvx0Oh42INIIe2QLAStFUexAewA1j4KCACF5bZgyVRaFKCKQ9r7/Yq3gB2KyvPZ7bAANWwtIAYgB5ABKbmwAElQgFs9gg8Q8K49lgdozmRAmF4iHM9sRMBAriAQApWJgZWIvO3y96jtbbapHnsq0RzJIx3s7FQ5tDoyYI7Po3XMB7iAw9sAV2SNI8ION0M3%2BMQAO61dBk0u0Ht71rT3dTuYzjaRl5zsMAERNUZj8aTaYz2a5qE%2BZUIWxaXteI6oLWeAsI2ZzNq2bAdt43ZMr2bj9naQ5QWOE4Pou84vkuy6ruum4EGSXD3gQB4gEep7EOeRwQehN60He%2BLsdOT7EQcH5fq%2BexeCkRh7FctL4K2ET0LSJBYIWYmHO%2BewnKgeDMS%2Bi5xgmKbplmOZ5gWRYMOgw7VqgE6oMyxBMEQxDWMp8HsC2bYoV29LoWSWGDvi5mjmYkiTregZNq5yEnJ2aHMt5NrYX5UF7KgBAINEM7fkRi7RvW3G1o5GwqTlyWpcQvFZXssG5QcljKRVcHFWlhx8dlK7LOuU5NYRAmEt%2BOl/vpgFGaBJlmYl1nRHZJDWBAPl7KogazQyeURnN1VWAVewMk1pFtXN23zp%2BPVCX1ekAYZwHGcWiU1MAm7oJJeAKAkdnIAgEDiQh7pMKAICggotKhZ9SHtpFqGeTFfZxb5%2BaJQRGULt%2BLVkR9LlYnUEA5Q%2BewAFTLlV1h1VVuOVQ%2BZXw4d4afs%2BgkEJgcV2RhQ4kczJFmhaKPNo9tKUtSdI9rFA5Do6%2B7NgQ5rRbyC4CdTry0/TtNkkzLMs2zDiTrRouerJKQAF4YT5StLsLGvulr7a6xhLosG6Hpej6fp2YGwZ2VCfmZdLL5y7aDNkiLLZ4Hr9J7JmQ6q5afu27JrR04wlFHJmpAG35xt0ZH7bR2wghkgnzquprdtHM7AZBg7cdPG7UtU1prxqRpFXEjq5sGrSaBxZgqjOc2AqoIhUoyhU9kC/FTyBapC1Q/XhDpeGfFhd3nMN3gur6oYtLBN7qwQCcgbBFPnWEt1LwcAstCcAArLwfgcFopA9xwbiOZYk5LCsvKwjwpAEJox8LE6EgaBofQnAAAsvAWAgDPoAq%2BN8768AUCAQBX9r7H1IHAWASBW4JDoNEcglBMHYJiDsQwwAuBmA0M0GgV5ojwIgBEb%2BpAIjBFqAyTgH9W6ZwIMmBgtAWHINIFgFgxDxB8PwPWSoZx4F8PbhUasawP7BFpqfPhtA8ARFssQBkHgsD0LFrBVhKDfTfQULGIsx5kzMivh/fgggRBiHYFIGQghFAqHUHw3QGx9DEJQI/GwKiwTwAgMwNgIArikDODEMWAInSPlvgkdokiAC0CT9zKVMDVSwZC9gJMEScVQZhowJOTBsLJ75QjvmwBYOQABxOB0c0QuFMiMJopBAhTCKCUbIyRUgCCaZ03IaQejtP6GMOp7ROjDE8I0PQ5Q0TjMmIUPoMQxgTF6csrogzFkSAWAoF%2Bqw9Bi0wHIlBSiL6kGgbwO%2BqhYiSASZIYBVoDBiVIdcDQ1wuB7AgA/dJNgYz4HstVDYzQ9geBtAQgFGw5i8CQVoGJqUmAKUoCfEBYCIFQPobA2wCDP7fxiUojYl90WcChTihY4SUjOGAUAA%3D"></iframe>
+			</section>
+			<section>
+				<h2>Practicalities</h2>
+			</section>
+			<section>
+				<h2>What about bugs?</h2>
+				<ul>
+					<li class="fragment">poor codegen</li>
+					<li class="fragment">compiletime bugs</li>
+					<li class="fragment">runtime bugs</li>
+				</ul>
+			</section>
+			<section>
+				<h2>API stability?</h2>
+				<h1 class="fragment">NO</h1>
+			</section>
+			<section>
+				<h2>ABI stability?</h2>
+				<p class="fragment">Within one commit ...</p>
+			</section>
+			<section>
+				<h2> Recommended workflow</h2>
+				<ul>
+					<li class="fragment"> limit the usage to more critical components </li>
+					<li class="fragment"> build a standalone library </li>
+					<li class="fragment"> dynamic linking </li>
+					<li class="fragment"> contact us </li>
+				</ul>
+			</section>
+			<section>
+				<h2>Similar Libraries</h2>
+				<ul>
+					<li class="fragment"> intrinsics wrappers
+						<a href="https://github.com/VcDevel/Vc"> Vc(std::simd)</a>,
+						<a href="https://github.com/xtensor-stack/xsimd">xsimd</a>,
+						<a href="https://github.com/jeffamstutz/tsimd">tsimd</a>
+					</li>
+					<li class="fragment"> <a href="https://github.com/simd-everywhere/simde">SIMD everywhere</a></li>
+				</ul>
+			</section>
+			<section>
+				<h2>Mentions</h2>
+				<ul>
+					<li class="fragment"> Jean-Thierry Lapresté </li>
+					<li class="fragment"> StackOverflow: @aqrit, @Peter Cordes, @Z boson, @Stephen Canon </li>
+				</ul>
+			</section>
+			<section>
+				<h2> Other talks</h2>
+				<ul> <li class="fragment"> <a href="https://youtu.be/d6NcnyXjc3I">My First Simd (Meeting C++2020)</a></li> </ul>
+			</section>
+			<section>
+				<h2>Contact information</h2>
+				<ul>
+					<li>slides: <a href="https://tinyurl.com/eve-simd-2021">tinyurl.com/eve-simd-2021</a> </li>
+					<li> <a href="github.com/jfalcou/eve">github.com/jfalcou/eve</a> (discussions/issues) </li>
+					<li> <a	href="https://discord.com/channels/692734675726237696/692735259204124692">Discord</a></li>
+					<li> cpplang slack: jfalcou, dyaroshev </li>
+					<li> email: joel.falcou@lri.fr, denis.yaroshevskij@gmail.com </li>
+					<li> twitter: @CppSpelunker, @dyaroshev</li>
+				</ul>
+			</section>
 		</div>
 
 		<script src="dist/reveal.js"></script>
