@@ -727,7 +727,16 @@
 					Reveal.right();
 					assert.equal( Reveal.getIndices().h, 0, 'looped from end to start' );
 
-					Reveal.configure({ loop: false });
+					Reveal.configure({ navigationMode: 'linear' });
+					Reveal.slide( 0, 0 );
+
+					Reveal.prev();
+					assert.notEqual( Reveal.getIndices().h, 0, 'looped from start to end in linear mode' );
+
+					Reveal.next();
+					assert.equal( Reveal.getIndices().h, 0, 'looped from end to start in linear mode' );
+
+					Reveal.configure({ loop: false, navigationMode: 'default' });
 				});
 
 
@@ -771,6 +780,31 @@
 				// EVENT TESTS
 
 				QUnit.module( 'Events' );
+
+				QUnit.test( 'beforeslidechange', function( assert ) {
+					var done = assert.async( 2 );
+
+					var normalEvent = function( event ) {
+						assert.ok( true, 'event fired' );
+						done();
+					}
+					var blockingEvent = function( event ) {
+						event.preventDefault();
+						assert.ok( true, 'event fired' );
+						done();
+					}
+
+					Reveal.on( 'beforeslidechange', normalEvent );
+					Reveal.slide( 2, 0 );
+					Reveal.off( 'beforeslidechange', normalEvent );
+
+					Reveal.on( 'beforeslidechange', blockingEvent );
+					Reveal.slide( 3, 0 );
+					Reveal.off( 'beforeslidechange', blockingEvent );
+
+					assert.strictEqual( Reveal.getIndices().h, 2, 'preventing "beforeslidechange" blocks navigation ' );
+
+				});
 
 				QUnit.test( 'slidechanged', function( assert ) {
 					assert.expect( 3 );
