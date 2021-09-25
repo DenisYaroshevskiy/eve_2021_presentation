@@ -154,13 +154,12 @@
 					</ul>
 				</ul>
 			</section>
-			<section id='marching_find'>
+			<section id='marching_orders'>
 				<script>
 					addBenchmarkForParameters(
-						'marching_find',
-						'MARCHing orders: find(int, 1000)',
+						'marching_orders',
+						'MARCHing orders:(int, 1000)',
 						{
-							name: 'find 0',
 							algorithm: 'selection',
 							size: 1000,
 							type: 'int',
@@ -168,47 +167,7 @@
 							padding: 'min',
 							group: 'x',
 						},
-						['eve::algo::find_if', 'std::find'],
-						['std']
-					);
-				</script>
-			</section>
-			<section id='marching_scan'>
-				<script>
-					addBenchmarkForParameters(
-						'marching_scan',
-						'MARCHing orders: scan(char, 10\'000)',
-						{
-							name: 'inplace transform',
-							size: 10000,
-							algorithm: 'selection',
-							type: 'char',
-							time: 'y',
-							padding: 'min',
-							group: 'x',
-							percentage: 100,
-						},
-						['eve::algo::inclusive_scan', 'std::inclusive_scan'],
-						['std']
-					);
-				</script>
-			</section>
-			<section id='marching_remove'>
-				<script>
-					addBenchmarkForParameters(
-						'marching_remove',
-						'MARCHing orders: remove(int)',
-						{
-							name: 'remove 0',
-							algorithm: 'selection',
-							size: 10000,
-							time: 'y',
-							type: 'int',
-							percentage: 'x',
-							padding: 'min',
-							group: 'selection'
-						},
-						['sse4.2', 'avx2'],
+						['eve::algo::find_if', 'std::find', 'eve::algo::inclusive_scan', 'std::inclusive_scan'],
 						['std']
 					);
 				</script>
