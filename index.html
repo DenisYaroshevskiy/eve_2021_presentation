@@ -30,9 +30,9 @@
 		}
 	</script>
 
-	<script> const UNSQ_EVE_COMMIT = '871b40b35f9ae83a829b361535bdd40a0ad0285f'; </script>
+	<script> const UNSQ_EVE_COMMIT = 'd68be33091157b1babd0f47af63b681f8652d4c3'; </script>
 	<script type="text/javascript"
-		src="https://cdn.jsdelivr.net/gh/DenisYaroshevskiy/unsq_eve@871b40b35f9ae83a829b361535bdd40a0ad0285f/scripts/bench.js"></script>
+		src="https://cdn.jsdelivr.net/gh/DenisYaroshevskiy/unsq_eve@d68be33091157b1babd0f47af63b681f8652d4c3/scripts/bench.js"></script>
 
 	<script type="text/javascript" src="helper_scripts.js"></script>
 
@@ -158,16 +158,17 @@
 				<script>
 					addBenchmarkForParameters(
 						'marching_orders',
-						'MARCHing orders:(int, 1000)',
+						'MARCHing orders: remove int, 10\'000',
 						{
+							group: 'selection',
 							algorithm: 'selection',
-							size: 1000,
+							size: 10000,
 							type: 'int',
+							percentage: 'x',
 							time: 'y',
-							padding: 'min',
-							group: 'x',
+							padding: 'min'
 						},
-						['eve::algo::find_if', 'std::find', 'eve::algo::inclusive_scan', 'std::inclusive_scan'],
+						['eve::algo::remove', 'std::remove'],
 						['std']
 					);
 				</script>
@@ -192,6 +193,7 @@
 							<li class="fragment"> 250+ numerical functions</li>
 						</ul>
 					<li class="fragment"> Supports all x86 flavors and AARCH64</li>
+					<li class="fragment"> MIT license </li>
 				</ul>
 				<h3>
 			</section>
