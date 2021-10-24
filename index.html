@@ -212,6 +212,7 @@
 			</section>
 			<section>
 				<h2>Why decorators?</h2>
+
 				<iframe width="1600px" height="550px" src="https://godbolt.org/e#g:!((g:!((g:!((h:codeEditor,i:(filename:'1',fontScale:16,fontUsePx:'0',j:1,lang:c%2B%2B,source:'%23include+%3Ceve/eve.hpp%3E%0A%23include+%3Ceve/function/cos.hpp%3E%0A%0Aeve::wide%3Cfloat%3E+cos(eve::wide%3Cfloat%3E+x)%0A%7B+%0A++return+eve::quarter_circle(eve::cos)(x)%3B+%0A%7D%0A'),l:'5',n:'0',o:'C%2B%2B+source+%231',t:'0')),k:100,l:'4',m:36.54096228868661,n:'0',o:'',s:0,t:'0'),(g:!((h:compiler,i:(compiler:arm64g1100,filters:(b:'0',binary:'1',commentOnly:'0',demangle:'0',directives:'0',execute:'1',intel:'0',libraryCode:'0',trim:'1'),flagsViewOpen:'1',fontScale:16,fontUsePx:'0',j:3,lang:c%2B%2B,libs:!((name:eve,ver:trunk)),options:'--std%3Dc%2B%2B20+-Wno-psabi++-O3+-DNDEBUG',source:1,tree:'1'),l:'5',n:'0',o:'ARM64+gcc+11.1+(C%2B%2B,+Editor+%231,+Compiler+%233)',t:'0')),header:(),l:'4',m:63.45903771131339,n:'0',o:'',s:0,t:'0')),l:'3',n:'0',o:'',t:'0')),version:4"></iframe>
 			</section>
 			<section>
@@ -316,24 +317,16 @@ auto mismatch(zipped_range_pair auto&& r, P p) -> zip_iterator
 			</section>
 			<section>
 				<h2>What about bugs?</h2>
-				<ul>
-					<li class="fragment">poor codegen</li>
-					<li class="fragment">compiletime bugs</li>
-					<li class="fragment">runtime bugs</li>
-				</ul>
+				<h1 class="fragment">YES</h1>
 			</section>
 			<section>
 				<h2>API stability?</h2>
 				<h1 class="fragment">NO</h1>
 			</section>
 			<section>
-				<h2>ABI stability?</h2>
-				<p class="fragment">Within one commit ...</p>
-			</section>
-			<section>
 				<h2> Recommended workflow</h2>
 				<ul>
-					<li class="fragment"> limit the usage to more critical components </li>
+					<li class="fragment"> focus on the critical components </li>
 					<li class="fragment"> build a standalone library </li>
 					<li class="fragment"> dynamic linking </li>
 					<li class="fragment"> contact us </li>
